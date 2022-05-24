@@ -22,12 +22,24 @@ function App() {
     setLocation({latitude: res.data.latitude, longitude: res.data.longitude});
   };
 
+  //check if form input is valid ip address
+  const checkIfValidIp = (str) => {
+    // Regex to check if string is a IP address
+    const regexExp = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi;
+    return regexExp.test(str);
+  }
+
   //search form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(`IP Entered: ${ip}`);
-    getGeoLocationData();
-    setFormSubmitionStatus('submitted');
+    if (checkIfValidIp(ip)) {
+      getGeoLocationData();
+      setFormSubmitionStatus('submitted');
+    }
+    else {
+      alert('Please input a correct ip address (format: 8.8.8.8')
+    }
   }
 
   return (
