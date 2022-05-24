@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/mhassantalpur/ip-app/static/js/main.fd76216e.js",
-    "index.html": "/mhassantalpur/ip-app/index.html",
-    "main.fd76216e.js.map": "/mhassantalpur/ip-app/static/js/main.fd76216e.js.map"
+    "main.js": "/ip-app/static/js/main.fd76216e.js",
+    "index.html": "/ip-app/index.html",
+    "main.fd76216e.js.map": "/ip-app/static/js/main.fd76216e.js.map"
   },
   "entrypoints": [
     "static/js/main.fd76216e.js"
